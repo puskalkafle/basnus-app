@@ -1,0 +1,33 @@
+:root {
+    /* 16px */
+    --space-unit: 1rem;
+  }
+  
+  :root, * {
+    /* https://codyhouse.co/ds/globals/spacing */
+    /* 2px */
+    --space-xxxxs: calc(0.125 * var(--space-unit));
+    /* 4 */
+    --space-xxxs: calc(0.25 * var(--space-unit));
+    /* 6 */
+    --space-xxs: calc(0.375 * var(--space-unit));
+    /* 8 */
+    --space-xs: calc(0.5 * var(--space-unit));
+    /* 12 */
+    --space-sm: calc(0.75 * var(--space-unit));
+      /* 16 */
+    --space: var(--space-unit);
+    /* 20 */
+    --space-md: calc(1.25 * var(--space-unit));
+    /* 32 */
+    --space-lg: calc(2 * var(--space-unit));
+    /* 52 */
+    --space-xl: calc(3.25 * var(--space-unit));
+    /* 84 */
+    --space-xxl: calc(5.25 * var(--space-unit));
+    /* 136 */
+    --space-xxxl: calc(8.5 * var(--space-unit));
+    /* 220 */
+    --space-xxxxl: calc(13.75 * var(--space-unit));
+    --component-padding: var(--space-md);
+  }

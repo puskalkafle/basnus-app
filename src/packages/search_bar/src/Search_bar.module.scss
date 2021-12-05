@@ -1,0 +1,41 @@
+@import "../../../sass/config/colors";
+body {
+    background: lightgray;
+}
+.types {
+    display: flex;
+    li {
+        display: inline-flex;
+    }
+    a {
+        background: $color-dark;
+        color: $color-white;
+        padding: var(--space-sm) var(--space-lg);
+        margin-right: var(--space-sm);
+        cursor: pointer;
+    }
+    :global(.active) {
+        color: $color-dark;
+        background: $color-white;
+    }
+}
+.search_bar_wrap {
+    display: flex;
+    input,
+    button {
+        padding: var(--space-lg) var(--space-xl);
+        border: none;
+    }
+    input {
+        width: 100%;
+    }
+    button {
+        background: $color-primary;
+        color: $color-white;
+    }
+    [type="search"]::-webkit-search-cancel-button,
+    [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}

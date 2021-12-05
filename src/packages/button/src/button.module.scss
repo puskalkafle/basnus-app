@@ -1,0 +1,46 @@
+// @import "../../../font/Avenir_Next/font.css";
+@import "../../../sass/app.scss";
+
+.button {
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  transition: 0.3s;
+  font-weight: 500;
+
+  &.primary {
+    color: $color-white;
+    background-color: $color-primary;
+    &:hover{
+      background-color: $color-primary-light;
+    }
+  }
+
+  &.secondary {
+    color: $color-dark;
+    background-color: transparent;
+    border: 1px solid $color-dark;
+    &:hover{
+      color: $color-white;
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+    }
+  }
+
+  // &.small {
+  //   font-size: 12px;
+  //   padding: 10px 16px;
+  // }
+
+  &.medium {
+    font-size: 16px;
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  // &.large {
+  //   font-size: 16px;
+  //   padding: 12px 24px;
+  // }
+}
