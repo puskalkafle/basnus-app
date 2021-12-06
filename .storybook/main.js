@@ -7,5 +7,6 @@ module.exports = {
     '@storybook/preset-scss',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    // '@storybook/addon-storysource',
   ]
 }

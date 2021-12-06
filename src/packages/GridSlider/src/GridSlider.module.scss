@@ -1,0 +1,10 @@
+@import "../../../sass/config/colors";
+
+.cities{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    li:first-child{
+        grid-row-end: span 2;
+        background: lightblue;
+    }
+}

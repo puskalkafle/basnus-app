@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import cx from "classnames"
-import styles from "./Search_bar.module.scss"
+import styles from "./SearchBar.module.scss"
 
 
 export interface SearchBarProps {
