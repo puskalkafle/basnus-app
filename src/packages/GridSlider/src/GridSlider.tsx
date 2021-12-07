@@ -12,6 +12,11 @@ export interface GridSliderProps {
  */
 const cities = [
   { name: "Kathmandu" },
+  { name: "Kathmandu" },
+  { name: "Kathmandu" },
+  { name: "Kathmandu" },
+  { name: "Kathmandu" },
+  { name: "Kathmandu" },
   { name: "Biratnagar" },
   { name: "Birgunj" },
   { name: "Pokhara" },
@@ -26,20 +31,25 @@ export const GridSlider: React.FC<GridSliderProps> = ({
   const handleClick = (index: number) => {
 
   };
+  const animateSlider = (goto: string) => {
+        console.log(goto)
+  };
   return (
     <div
       {...props}
     >
       <ul className={cx([
-        styles.cities
+        styles.cities,
+        'cities-slider'
       ])}>
         {cities.map((city, index) => (
           <li key={index}><a onClick={() => handleClick(index)} className={cx([
             `city${index+1}`
           ])}
-          ><img alt={city.name} title={city.name} src={'https://picsum.photos/200/300'}/></a></li>
+          ><img alt={city.name} title={city.name} src={'https://picsum.photos/1000'}/></a></li>
         ))}
       </ul>
+      <button className={cx(['circular-btn','next-slide'])} onClick={() => animateSlider('next')}>Next Slide</button>
     </div>
   )
 }
