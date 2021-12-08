@@ -27,21 +27,27 @@ export const GridSlider: React.FC<GridSliderProps> = ({
   placeholder = "write text here",
   ...props
 }) => {
+  const [isRightPosition, setRightPosition] = useState('0px');
 
   const handleClick = (index: number) => {
 
   };
   const animateSlider = (goto: string) => {
-        console.log(goto)
+        console.log(isRightPosition);
+        setRightPosition('100%px');
+        console.log(isRightPosition);
   };
   return (
     <div
+      className={cx([styles.cities_slider_wrap,'circular-btn-wrap'])}
       {...props}
     >
       <ul className={cx([
         styles.cities,
         'cities-slider'
-      ])}>
+      ])}
+      style={{right: isRightPosition}}
+      >
         {cities.map((city, index) => (
           <li key={index}><a onClick={() => handleClick(index)} className={cx([
             `city${index+1}`
@@ -49,7 +55,7 @@ export const GridSlider: React.FC<GridSliderProps> = ({
           ><img alt={city.name} title={city.name} src={'https://picsum.photos/1000'}/></a></li>
         ))}
       </ul>
-      <button className={cx(['circular-btn','next-slide'])} onClick={() => animateSlider('next')}>Next Slide</button>
+      <button className={cx(['circular-btn','next-slide'])} onClick={() => animateSlider('next')}>&gt;</button>
     </div>
   )
 }
