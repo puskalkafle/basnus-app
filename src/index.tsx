@@ -1,8 +1,18 @@
-import "./font/Avenir_Next/font.css";
-import "./sass/app.scss";
-
-// export { Button } from "./packages/button/src"
-// export type { ButtonProps } from "./packages/button/src"
-
-// export { Header } from "./packages/header/src"
-// export type { HeaderProps } from "./packages/header/src"
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
+import { App } from "./App";
+import store from "redux/store";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistStore } from "redux-persist";
+import { BrowserRouter } from "react-router-dom";
+render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <PersistGate loading={null} persistor={persistStore(store)}>
+        <App />
+      </PersistGate>
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById("root")
+);

@@ -1,0 +1,127 @@
+// @import "../../../sass/config/colors";
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 200%;
+  gap: var(--space);
+  li {
+    position: relative;
+    &:first-child {
+      grid-row-end: span 2;
+      background: lightblue;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .city_name {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.cities_slider_wrap {
+  ul {
+    position: relative;
+    right: 0;
+    transition: all 0.25s ease;
+    overflow: hidden;
+  }
+  button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    border: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    &.active {
+      animation: 1s fadeIn;
+      animation-fill-mode: forwards;
+      opacity: 1;
+    }
+    &.inactive {
+      animation: 1s fadeOut;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+  }
+  .next_slide {
+    right: 20px;
+  }
+  .prev_slide {
+    left: 40px;
+  }
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOut {
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+// @mixin fadeInOut($fadeIn: true) {
+//   @if $fadeIn {
+//     @keyframes fadeIn {
+//       99% {
+//         visibility: hidden;
+//       }
+//       100% {
+//         visibility: visible;
+//       }
+//     }
+//   } @else {
+//     @keyframes fadeOut {
+//       99% {
+//         visibility: visible;
+//       }
+//       100% {
+//         visibility: hidden;
+//       }
+//     }
+//   }
+// }
