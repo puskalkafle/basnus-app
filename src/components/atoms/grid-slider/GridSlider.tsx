@@ -1,5 +1,7 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import cx from "classnames";
+import downArrow from '../../../assets/image/arrow-down.svg';
+import rightArrow from '../../../assets/image/arrow-forward.svg';
 
 
 
@@ -48,7 +50,6 @@ export const GridSlider: React.FC<GridSliderProps> = ({
       {...props}
     >
       <ul className={cx([
-        // styles.cities,
         'cities',
         'cities-slider'
       ])}
@@ -59,17 +60,16 @@ export const GridSlider: React.FC<GridSliderProps> = ({
             `city${index + 1}`
           ])}
           >
-            {/* <div className={cx([styles.city_name])}> */}
             <div className={cx(['city_name'])}>
               <h4>{city.name}</h4>
-              <h4><span>V</span></h4>
+              <h4><span className={cx(['down-arrow'])}><img src={downArrow} /></span></h4>
             </div>
 
             <img alt={city.name} title={city.name} src={'https://picsum.photos/1000'} /></a></li>
         ))}
       </ul>
-      <button className={cx(['circular_btn', 'next_slide', (isActiveButton === 'next' ? 'active' : 'inactive')])} onClick={() => animateSlider('next')}>&gt;</button>
-      <button className={cx(['circular_btn', 'prev_slide', (isActiveButton === 'prev' ? 'active' : 'inactive')])} onClick={() => animateSlider('prev')}>&lt;</button>
+      <button className={cx(['circular_btn', 'next_slide', (isActiveButton === 'next' ? 'active' : 'inactive')])} onClick={() => animateSlider('next')}><img src={rightArrow} /></button>
+      <button className={cx(['circular_btn', 'prev_slide', (isActiveButton === 'prev' ? 'active' : 'inactive')])} onClick={() => animateSlider('prev')}><img src={rightArrow} /></button>
     </div>
   )
 }
