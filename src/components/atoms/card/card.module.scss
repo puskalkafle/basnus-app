@@ -1,0 +1,12 @@
+@import "../../../assets/styles/config/colors";
+
+.card {
+  text-align: center;
+  h4 {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space);
+  }
+  p {
+    margin-bottom: var(--space-lg);
+  }
+}
