@@ -4,7 +4,7 @@ import { Story, Meta } from "@storybook/react/types-6-0"
 import { GridSlider, GridSliderProps } from "."
 
 export default {
-  title: "atoms/GridSlider",
+  title: "Components/GridSlider",
   component: GridSlider,
   argTypes: {
   },

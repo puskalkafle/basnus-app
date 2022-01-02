@@ -4,7 +4,7 @@ import { Story, Meta } from "@storybook/react/types-6-0"
 import { SearchBar, SearchBarProps } from "."
 
 export default {
-  title: "atoms/Search Bar",
+  title: "Components/Search Bar",
   component: SearchBar,
   argTypes: {
   },

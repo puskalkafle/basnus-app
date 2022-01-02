@@ -6,7 +6,7 @@ import { Card, CardProps } from "."
 import icon from "../../../assets/image/card/buy_home.svg"
 
 export default {
-  title: "Atoms/Card",
+  title: "Components/Card",
   component: Card,
   imgSrc: 'img',
   argTypes: {

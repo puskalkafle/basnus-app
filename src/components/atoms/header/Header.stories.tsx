@@ -4,7 +4,7 @@ import { Story, Meta } from "@storybook/react/types-6-0"
 import { Header, HeaderProps } from "./"
 
 export default {
-  title: "atoms/Header",
+  title: "Components/Header",
   component: Header
 } as Meta
 
