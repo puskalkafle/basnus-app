@@ -1,7 +1,8 @@
 @import "../font/Avenir_Next/font.css";
+// @import "../styles/config/colors";
+@import "../styles/config/index";
 @import "../../pages/**/*.scss";
 @import "../../components/**/**/*.scss";
-@import "../styles/config/index";
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
 }
 
 body {
-  font-family: "Avenir Next";
+  // font-family: "Avenir Next";
   background: #ebebeb;
 }
 
@@ -40,4 +41,12 @@ a {
 ul,
 li {
   list-style: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  .col {
+    width: 100%;
+  }
 }

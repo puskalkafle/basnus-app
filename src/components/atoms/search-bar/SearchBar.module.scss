@@ -23,7 +23,7 @@
     padding: var(--space-lg) var(--space-xl);
     border: none;
   }
-  input {
+  & > div {
     width: 100%;
   }
   button {
@@ -34,5 +34,14 @@
   [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
     appearance: none;
+  }
+  & > div > div {
+    height: 82px;
+
+    & > div {
+      & > div:first-child {
+        padding: 2px 18px;
+      }
+    }
   }
 }

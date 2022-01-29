@@ -14,6 +14,5 @@ const Template: Story<SearchBarProps> = (args) => <SearchBar {...args} />
 
 export const Ui = Template.bind({})
 Ui.args = {
-  // variant: 'primary',
-  placeholder: 'text'
+  placeholder: 'Eg.: Kathmandu, Nepal'
 }

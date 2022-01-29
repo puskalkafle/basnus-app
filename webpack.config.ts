@@ -56,6 +56,7 @@ module.exports = {
               sassOptions: {
                 importer: globImporter(),
               },
+              additionalData: '@import "_colors.scss";',
             },
           },
         ],
