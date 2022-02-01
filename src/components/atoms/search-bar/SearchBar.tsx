@@ -39,7 +39,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     setActive(index + 1);
   };
   const searchLocation = (e: SyntheticEvent): void => {
-    (e.target.value) ? setSuggestionListVisibility(true) : setSuggestionListVisibility(false);
+    // (e.target.value) ? setSuggestionListVisibility(true) : setSuggestionListVisibility(false);
   }
   return (
     <div

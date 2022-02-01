@@ -1,5 +1,6 @@
 import React from "react"
 import cx from "classnames"
+import styles from "./card.module.scss"
 import { Button } from "../button"
 
 export interface CardProps {
@@ -37,7 +38,7 @@ export const Card: React.FC<CardProps> = ({
 }) => (
   <div
     className={cx([
-      'card'
+      styles.card
     ])}
     style={{ backgroundColor }}
     onClick={loading ? undefined : onClick}

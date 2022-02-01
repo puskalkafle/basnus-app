@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Input from "components/atoms/input";
-import Button from "components/atoms/button";
+// import Button from "components/atoms/button/Button";
 import { useSelector } from "react-redux";
 import { todoSelector } from "redux/todo/todo.selector";
 import { UseAppDispatch } from "redux/store";
@@ -53,7 +53,7 @@ const Todo = () => {
         value={text}
         maxLength={50}
       />
-      <Button onClick={buttonClick} />
+      {/* <Button onClick={buttonClick} /> */}
       <div className="m-todo__board">
         {todos.map(({ todo, color }) => {
           return (

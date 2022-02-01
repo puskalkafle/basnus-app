@@ -9,7 +9,7 @@ import { todoSelector } from "redux/todo/todo.selector";
 import { RootState } from "redux/root.reducer";
 import { connect } from "react-redux";
 import Input from "components/atoms/input";
-import Button from "components/atoms/button";
+// import Button from "components/atoms/button";
 import { addToDo, fetchquotes, TodoProps } from "redux/todo/todo.slice";
 import StickyNote from "components/atoms/sticky-note";
 
@@ -79,7 +79,7 @@ export class TodoClassComponent extends Component<
           value={text}
           maxLength={50}
         />
-        <Button onClick={this.buttonClick} />
+        {/* <Button onClick={this.buttonClick} /> */}
         <div className="m-todo__board">
           {todos.map(({ todo, color }) => {
             return (

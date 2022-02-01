@@ -11,6 +11,7 @@ render(
     <BrowserRouter>
       <PersistGate loading={null} persistor={persistStore(store)}>
         <App />
+        {/* <h1>index page</h1> */}
       </PersistGate>
     </BrowserRouter>
   </Provider>,
