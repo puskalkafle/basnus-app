@@ -47,6 +47,8 @@
 
 .cities_slider_wrap {
   position: relative;
+  width: 100%;
+  overflow: hidden;
   ul {
     position: relative;
     right: 0;

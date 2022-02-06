@@ -35,6 +35,19 @@
   --space-xxxxl: calc(13.75 * var(--space-unit));
   --component-padding: var(--space-md);
 }
+/* color */
+:root {
+  --color-primary: #ce4b1a;
+  --color-primary-dark: #b33d12;
+  --color-primary-light: #d2592c;
+  --color-primary-lighter: #f8f2f0;
+  --color-secondary: #e6a87a;
+  --color-secondary-dark: #9c5633;
+  --color-tertiary: #332e2b;
+  --color-dark: #333333;
+  --color-white: #ffffff;
+  --color-light: #f2efed;
+}
 
 /**
 * Reset
@@ -62,7 +75,6 @@ a {
 }
 
 body {
-  background: #ebebeb;
   font-family: "Avenir Next";
 }
 
@@ -98,4 +110,17 @@ li {
 }
 .col {
   width: 100%;
+}
+/* .section {
+  padding: 20px 0;
+} */
+.bn-space-xxl-top {
+  margin-top: var(--space-xxl);
+}
+.bn-space-xl-bottom {
+  margin-bottom: var(--space-xl);
+}
+.title-light {
+  font-weight: 500;
+  /* color: var(--color-light); */
 }
