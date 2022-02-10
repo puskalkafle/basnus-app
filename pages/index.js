@@ -3,11 +3,14 @@ import { Header } from "../src/components/atoms/header";
 import { Footer } from "../src/components/atoms/footer";
 import { GridSlider } from "../src/components/atoms/grid-slider";
 import { Card } from "../src/components/atoms/card";
+import { SearchBar } from "../src/components/atoms/search-bar";
 import Container from "../src/components/common/Container";
 import downArrow from "../public/image/arrow-down.svg";
 import rightArrow from "../public/image/arrow-forward.svg";
 import buyHome from "../public/image/card/buy_home.svg";
 import iconFacebook from "../public/image/social-media/facebook.svg";
+import bannerImage from "../public/image/banner.jpg";
+import styles from "../styles/Home.module.scss";
 
 let socialMedias = [
   { name: "Facebook", link: "#test", image: iconFacebook.src },
@@ -26,6 +29,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <div
+        className={styles.banner}
+        style={{
+          backgroundImage: `url(${bannerImage.src})`,
+          backgroundSize: "cover",
+        }}
+      >
+        <Container>
+          <SearchBar />
+        </Container>
+      </div>
       <Container>
         <h5 className="h2 bn-space-xxl-top bn-space-xl-bottom title-light">
           GETTING STARTED

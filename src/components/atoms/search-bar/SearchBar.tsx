@@ -1,5 +1,6 @@
 import React, { useState, SyntheticEvent } from "react"
 import cx from "classnames"
+import styles from "./SearchBar.module.scss"
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 
@@ -49,15 +50,15 @@ export const SearchBar: React.FC<SearchBarProps> = ({
       {...props}
     >
       <ul className={cx([
-        'types'
+        styles.types
       ])}>
         {tabs.map((tab, index) => (
-          <li key={index}><a onClick={() => handleToggle(index)} className={isActive === (index + 1) ? "active" : ''}>{tab.name}</a></li>
+          <li key={index}><a onClick={() => handleToggle(index)} className={isActive === (index + 1) ? 'active' : ''}>{tab.name}</a></li>
         ))}
       </ul>
 
 
-      <div className={cx(['search_bar_wrap'])} >
+      <div className={cx(styles['search_bar_wrap'])} >
         {/* <input type="search" placeholder={placeholder} onKeyUp={searchLocation} /> */}
         <GooglePlacesAutocomplete
           // placeholder={placeholder}
