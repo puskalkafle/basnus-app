@@ -76,8 +76,8 @@ export const GridSlider: React.FC<GridSliderProps> = ({
               <img alt={city.name} title={city.name} src={'https://picsum.photos/1000'} /></a></li>
           ))}
         </ul>
-        <button className={cx([styles['circular_btn'], styles['next_slide'], (isActiveButton === 'next' ? 'active' : 'inactive')])} onClick={() => animateSlider('next')}><img src={rightArrowPath} /></button>
-        <button className={cx([styles['circular_btn'], styles['prev_slide'], (isActiveButton === 'prev' ? 'active' : 'inactive')])} onClick={() => animateSlider('prev')}><img src={rightArrowPath} /></button>
+        <button className={cx([styles['circular_btn'], styles['next_slide'], (isActiveButton === 'next' ? styles['active'] : styles['inactive'])])} onClick={() => animateSlider('next')}><img src={rightArrowPath} /></button>
+        <button className={cx([styles['circular_btn'], styles['prev_slide'], (isActiveButton === 'prev' ? styles['active'] : styles['inactive'])])} onClick={() => animateSlider('prev')}><img src={rightArrowPath} /></button>
       </div>
     </Container>
   )
