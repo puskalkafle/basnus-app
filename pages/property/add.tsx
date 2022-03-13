@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import getpropertiesApi from "../api/properties";
-import useApi from "../hooks/useApi";
-import Container from "../src/components/common/Container";
+import getpropertiesApi from "../../api/properties";
+import useApi from "../../hooks/useApi";
+import Container from "../../src/components/common/Container";
 
 
 
