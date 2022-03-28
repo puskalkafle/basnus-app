@@ -14,6 +14,7 @@ export default (apiFunc) => {
             setError(err.message || "Unexpected Error!");
         } finally {
             setLoading(false);
+            // console.log(data);
         }
     };
 
